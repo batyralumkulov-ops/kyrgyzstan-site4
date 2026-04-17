@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ГОРИЗОНТ КОЧЕВНИКА | Кыргызстан</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700;800;900&amp;family=Manrope:wght@300;400;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#251a00",
+                        "inverse-primary": "#ffb780",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#423100",
+                        "on-primary-fixed": "#2f1400",
+                        "on-surface-variant": "#43474f",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "tertiary-fixed": "#ffdf96",
+                        "secondary": "#006a60",
+                        "surface-container": "#f1ede8",
+                        "surface-bright": "#fcf9f3",
+                        "on-background": "#1c1c19",
+                        "surface-dim": "#dcdad4",
+                        "tertiary": "#281d00",
+                        "background": "#fcf9f3",
+                        "primary-fixed-dim": "#ffb780",
+                        "on-primary-container": "#d78a4b",
+                        "outline-variant": "#c3c6d1",
+                        "secondary-fixed": "#8cf5e4",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#007166",
+                        "primary-container": "#522800",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#b99843",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#ebe8e2",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-surface": "#1c1c19",
+                        "on-secondary-fixed": "#00201c",
+                        "secondary-container": "#8cf5e4",
+                        "secondary-fixed-dim": "#6fd8c8",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f6f3ee",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface": "#fcf9f3",
+                        "primary-fixed": "#ffdcc4",
+                        "inverse-surface": "#31302d",
+                        "on-primary-fixed-variant": "#6f3800",
+                        "surface-variant": "#e5e2dd",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f4f0eb",
+                        "surface-tint": "#8e4e14",
+                        "primary": "#331700",
+                        "outline": "#737780"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .organic-path {
+            clip-path: ellipse(100% 50% at 50% 100%);
+        }
+        .mask-jagged {
+            clip-path: polygon(0% 15%, 15% 0%, 35% 15%, 50% 0%, 70% 20%, 85% 5%, 100% 15%, 100% 100%, 0% 100%);
+        }
+        .floating-layer {
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .floating-layer:hover {
+            transform: translateY(-12px) scale(1.02);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm dark:shadow-none">
+    <nav class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary dark:text-teal-400 text-3xl">landscape</span>
+            <span class="text-2xl font-black text-primary dark:text-stone-100 italic font-headline tracking-tight uppercase">ГОРИЗОНТ КОЧЕВНИКА</span>
+        </div>
+        <div class="hidden md:flex items-center gap-10 font-epilogue font-bold tracking-tight">
+            <a class="text-secondary border-b-2 border-secondary font-bold pb-1" href="#" id="exploreLink">ИССЛЕДОВАТЬ</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#destinations">ЭКСПЕДИЦИИ</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#gallery">ЖУРНАЛЫ</a>
+            <a class="px-6 py-2 bg-tertiary-fixed text-on-tertiary-fixed rounded-full hover:scale-105 transition-all duration-300 shadow-sm" href="#visit">ПОСЕТИТЕ НАС</a>
+        </div>
+        <button class="md:hidden p-2 text-primary" id="mobileMenuBtn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="md:hidden hidden bg-surface/95 backdrop-blur-xl border-t border-outline-variant/20 px-6 py-4 flex flex-col gap-4">
+        <a class="text-secondary font-bold pb-1" href="#" id="mobileExploreLink">ИССЛЕДОВАТЬ</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#destinations">ЭКСПЕДИЦИИ</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#gallery">ЖУРНАЛЫ</a>
+        <a class="px-6 py-2 bg-tertiary-fixed text-on-tertiary-fixed rounded-full hover:scale-105 transition-all duration-300 shadow-sm text-center" href="#visit">ПОСЕТИТЕ НАС</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 z-0">
+        <img alt="Issyk-Kul Lake" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQECKpqtFBimQD2Jm3B8AnFPvTVPR7mAYm_xwsZr9P9dMy9boBDFzszZgSWoN5N0z2EdUOe7Cv5J_f6WPFB_0g-ksKFDokoZH0mn3zFv-dToDSB8oEQv1E1Ke8bMBTEsH1-N6y9dDLvuhfVu-QhLzNeTSL_Clq6PDkMUzY5MiwvuvB4NzlqGXC4ePfHtjl-vXc36InrfOVQtQ5GSg29oNKhuCFRNjdO-eoldfDyCWQ27_gFL97-S5yhSyMHp5fGZXQsWxnZhNM2qb"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-surface"></div>
+    </div>
+    <div class="relative z-10 text-center max-w-4xl px-6">
+        <div class="inline-flex items-center gap-2 mb-6 px-4 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-label text-sm tracking-widest uppercase">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            Врата Великого Шелкового пути
+        </div>
+        <h1 class="font-headline font-black text-5xl md:text-7xl lg:text-8xl text-white mb-8 tracking-tighter leading-tight drop-shadow-2xl">
+            Откройте для себя сердце <br/>
+            <span class="text-secondary-fixed">Центральной Азии</span>
+        </h1>
+        <p class="text-white/90 text-xl md:text-2xl mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+            Почувствуйте первозданное величие высокогорных ландшафтов Кыргызстана и вневременной дух кочевой культуры.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a class="px-10 py-5 bg-tertiary-fixed text-on-tertiary-fixed font-headline font-bold rounded-xl text-lg hover:scale-105 hover:bg-tertiary-fixed-dim transition-all duration-300 shadow-xl flex items-center justify-center gap-2" href="#visit">
+                ПОСЕТИТЕ НАС <span class="material-symbols-outlined">north_east</span>
+            </a>
+            <a class="px-10 py-5 bg-white/10 backdrop-blur-xl border border-white/30 text-white font-headline font-bold rounded-xl text-lg hover:bg-white/20 transition-all duration-300"
+            href="routes.html">
+            МАРШРУТЫ
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-surface organic-path"></div>
+</section>
+
+<!-- Destinations Grid -->
+<section class="py-32 px-8 max-w-7xl mx-auto" id="destinations">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div class="max-w-2xl">
+            <span class="font-label text-secondary font-bold tracking-[0.2em] uppercase mb-4 block">Экспедиции</span>
+            <h2 class="font-headline text-5xl font-extrabold text-primary mb-6">Священные пики и зыбучие пески</h2>
+            <p class="text-on-surface-variant text-lg">Каждая долина хранит свою историю. От альпийских берегов Чолпон-Аты до древних ореховых лесов Сары-Челека — найдите свой путь.</p>
+        </div>
+        <div class="hidden md:block">
+            <div class="w-32 h-32 border-2 border-dashed border-outline-variant rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-secondary text-4xl">travel_explore</span>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <div class="group relative bg-surface-container-low rounded-lg overflow-hidden floating-layer">
+            <div class="h-80 overflow-hidden">
+                <img alt="Чолпон-Ата" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./image/cholponata.png"/>
+            </div>
+            <div class="p-8">
+                <h3 class="font-headline text-2xl font-bold mb-2">Чолпон-Ата</h3>
+                <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Жемчужина северного берега, где древние петроглифы встречаются с кристально чистой водой.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all"
+                href="details-cholponata.html">
+                Подробнее <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/80 backdrop-blur rounded-full text-[10px] font-black tracking-widest uppercase">1,608М ВЫС.</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="group relative bg-surface-container-low rounded-lg overflow-hidden floating-layer mt-8 lg:mt-16">
+            <div class="h-80 overflow-hidden">
+                <img alt="Ала-Тоо" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./image/Alaa-Too.png"/>
+            </div>
+            <div class="p-8">
+                <h3 class="font-headline text-2xl font-bold mb-2">Ала-Тоо</h3>
+                <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Величественные пики, возвышающиеся над столицей, предлагающие треккинг мирового уровня.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all"
+                href="details-ala-too.html">
+                Подробнее <span class="material-symbols-outlined            text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/80 backdrop-blur rounded-full text-[10px] font-black tracking-widest uppercase">4,895М ВЫС.</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="group relative bg-surface-container-low rounded-lg overflow-hidden floating-layer">
+            <div class="h-80 overflow-hidden">
+                <img alt="Кырчын" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./image/kyrchyn.png"/>
+            </div>
+            <div class="p-8">
+                <h3 class="font-headline text-2xl font-bold mb-2">Кырчын</h3>
+                <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Историческая колыбель Всемирных игр кочевников, где наследие продолжает жить.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all"
+                href="details-kyrchyn.html">
+                Подробнее
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/80 backdrop-blur rounded-full text-[10px] font-black tracking-widest uppercase">ДОЛИНА</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="group relative bg-surface-container-low rounded-lg overflow-hidden floating-layer mt-8 lg:mt-16">
+            <div class="h-80 overflow-hidden">
+                <img alt="Сары-Челек" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./image/sarychelek.png"/>
+            </div>
+            <div class="p-8">
+                <h3 class="font-headline text-2xl font-bold mb-2">Сары-Челек</h3>
+                <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Биосферный заповедник с мерцающими озерами и древними лесами.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all"
+                href="details-sarychelek.html">
+                Подробнее <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="absolute top-4 right-4 px-3 py-1 bg-white/80 backdrop-blur rounded-full text-[10px] font-black tracking-widest uppercase">ЗАПОВЕДНИК</div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Presentation Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="font-headline text-5xl font-black mb-8 leading-tight italic">Почувствуйте пульс <span class="text-tertiary-fixed-dim">Великой степи.</span></h2>
+                <p class="text-lg text-white/70 mb-10 leading-relaxed">Посмотрите наше кинематографическое путешествие по скрытым уголкам Тянь-Шаня. Мы не просто показываем вам вид; мы показываем душу кочевника.</p>
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4">
+                        <span class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white"><span class="material-symbols-outlined">eco</span></span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">Экологичные путешествия</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white"><span class="material-symbols-outlined">groups</span></span>
+                        <span class="font-headline font-bold uppercase tracking-widest text-sm">Местные сообщества</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative group cursor-pointer aspect-video bg-stone-800 rounded-xl overflow-hidden shadow-2xl" id="videoTrigger">
+                <img alt="Video Placeholder" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgd2Y6XRTi1EoR4m6lzv71ZjVwQgA2aQO5SQCyoOLJ-lfnvyn-ssnt3Oxd48uAhsbsQlSzeJbPXXkyDhS4i2EKF9y9aeop3IDMK010_w0-tOSZEBAgApC8yicysZDWbizB6UBKkECilPhQ9bXqX0ds_Qg1BbBbS72TCVhN9_q_efYQCFFil9dGQ5pA4nn6AcDm2oPgzFubVUvMXScKPIQKvfHmZPBHZpjgzAnmkGDlPWdayBDFe6n2AT7i_Mx7O6l6WjEl06v-unFK"/>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-24 h-24 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center group-hover:scale-125 transition-transform shadow-2xl">
+                        <span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute -bottom-20 -right-20 opacity-10">
+        <span class="material-symbols-outlined text-[40rem]">landscape</span>
+    </div>
+</section>
+
+<!-- Gallery Section (Bento Grid) -->
+<section class="py-32 bg-surface-container-low" id="gallery">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-20">
+            <span class="font-label text-secondary font-bold tracking-[0.2em] uppercase mb-4 block">Визуальные дневники</span>
+            <h2 class="font-headline text-5xl font-extrabold text-primary uppercase">МГНОВЕНИЯ, ЗАСТЫВШИЕ ВО ВРЕМЕНИ</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[auto] md:h-[800px]">
+            <div class="md:col-span-2 md:row-span-2 min-h-[400px] rounded-lg overflow-hidden relative group">
+                <img alt="Eagle Hunter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5100afItFPCLVO4Xq3sFjamTfab-JA6V5in6vR0kWM7P3MWomwqbtNKHKiLL7krIgXxzpkrc8e3lCKuac-SbCh8AClBM8-0lr-dpnWnPkfPMDjkh7Y8PWhvk4Ncl-xjgME1HPHfA_lmdUEWRtpGkgWBAGZwZ_-A_ThnTI0hPPHAvQm1mdpl7yr-xbx4H5bGVS6ZFJZsczh0OA01Ppd_cCfgodTFtv1LdHPilHb4XCFEqfA7ZDw4dzpjsOxBzX9LTZefuLi_HWLYR7"/>
+                <div class="absolute bottom-6 left-6 text-white bg-black/20 p-4 backdrop-blur-md rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="font-label text-xs uppercase tracking-tighter">Наследие</span>
+                    <p class="font-headline font-bold">Мастера беркутчи</p>
+                </div>
+            </div>
+            <div class="md:col-span-1 min-h-[250px] rounded-lg overflow-hidden group">
+                <img alt="Milky Way over Lake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIs6AtVr7u5EBhEuQ50y4ClrC7MFaw9vQ9h4BViRRgE2mWM_hMXeCEhTzmVeOLbkIpJrrTcYgty9jj_FkWL4LMQACPD1JPUe9WLLOuom9EAhbMUrtoDQ-bVK8K7LI-U60dtm1iLM-SybR62aDokGo2QaTYLDgDxI6qtn-lVGb6_E5EG1nf5CbYeJYT_0hfI4ATRnNLFyc2EnrqEGS1TFIr0Zs1blA6nwArWpMCOh7bEIjkwbczKKx2n1CzIdB2106DI34dz_jQfSTq"/>
+            </div>
+            <div class="md:col-span-1 min-h-[250px] rounded-lg overflow-hidden group">
+                <img alt="Yurt Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVZRzaE1ktfrEL3EeaomgKWNc_h7awNSvRyjAd1Z1YzttAcAB1Q9Rb6ckifpenk-gWfG5VwzXMyFzoEdmYcB71-77bQOSy4TtkpZYh0pu7S2Mb0KLjxtwiv7xpzG4H1DwbuWuK6an-R3KAQn7dV82Bd1xh7Z3JCmK8aTpYq9NuEsZUEu_YweXCqqbaVM1JDhQR8f81FEx2-dlf0jwrk2d4Vyv34Q2Q8bLapIOwxF-xsyEqcC-0f2Ek6DveblrApNVr7641kYNtYgFW"/>
+            </div>
+            <div class="md:col-span-2 min-h-[300px] rounded-lg overflow-hidden group">
+                <img alt="Kyrgyz Steppe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClKh-9_3TalJeI06ozzFVeeakkAxnx7rFcH7wSebc-uYTqVdcq88b1z3zVGBKkGEme1QCq58UAI8MrX53pCrvzdA-ARnFfXGQ4ts5tkAauRD5xtBUFy_DG7lVfSl5_X0gnjblyEVj8eHfzLDWXY2ndRswmSQKYGGDNdc4kepaZsX-D8l39gyNjl76F6nOsDaionQXa6kzkHeBnUvAkbuk7U-c-LCQwKrX9TIjstbDZ2klfNtLYp81mXgdufYDblgHm_r0moEP4MHmf"/>
+            </div>
+        </div>
+        <div class="mt-12 text-center">
+            <a href="gallery.html"
+            class="px-8 py-4 bg-primary text-white font-headline font-bold rounded-xl hover:bg-secondary transition-all inline-block text-center">
+            ПОСМОТРЕТЬ ГАЛЕРЕЮ
+</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact / CTA Section -->
+<section class="py-32 px-8" id="visit">
+    <div class="max-w-5xl mx-auto bg-surface-container rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-headline text-5xl font-black text-primary mb-8 leading-tight">Готовы к путешествию всей жизни?</h2>
+                <p class="text-on-surface-variant text-lg mb-12">Свяжитесь с нашими специалистами по экспедициям, чтобы составить ваш индивидуальный маршрут по Кыргызстану. Будь то конный треккинг или роскошные юрты, у нас есть ключи к горам.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-primary font-bold"><span class="material-symbols-outlined text-secondary">mail</span> info@nomadichorizon.kg</div>
+                    <div class="flex items-center gap-4 text-primary font-bold"><span class="material-symbols-outlined text-secondary">call</span> +996 (312) 555-NOMAD</div>
+                </div>
+            </div>
+            <div class="bg-surface p-8 rounded-lg shadow-2xl">
+                <form class="space-y-6" id="contactForm">
+                    <div>
+                        <label class="block font-label text-xs font-bold text-secondary uppercase tracking-widest mb-2">Ваше ФИО</label>
+                        <input class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-secondary" placeholder="Тургунбек Кочевник" type="text" id="nameInput" required/>
+                    </div>
+                    <div>
+                        <label class="block font-label text-xs font-bold text-secondary uppercase tracking-widest mb-2">Электронная почта</label>
+                        <input class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-secondary" placeholder="turgun@traveler.com" type="email" id="emailInput" required/>
+                    </div>
+                    <div>
+                        <label class="block font-label text-xs font-bold text-secondary uppercase tracking-widest mb-2">Сообщение</label>
+                        <textarea class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-secondary" placeholder="Расскажите нам о маршруте вашей мечты..." rows="4" id="messageInput" required></textarea>
+                    </div>
+                    <button class="w-full py-4 bg-tertiary-fixed text-on-tertiary-fixed font-headline font-black rounded-xl hover:scale-[1.02] transition-transform" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                </form>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-surface-container-low dark:bg-stone-950">
+    <div class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-epilogue text-sm uppercase tracking-widest">
+        <div class="col-span-1 md:col-span-1">
+            <span class="text-lg font-bold text-primary dark:text-stone-200 block mb-6">ГОРИЗОНТ КОЧЕВНИКА</span>
+            <p class="text-on-surface-variant normal-case tracking-normal mb-8">Создаем аутентичные впечатления в самом сердце Шелкового пути с 2012 года.</p>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-secondary transition-all cursor-pointer" onclick="alert('Наш сайт в мире')"><span class="material-symbols-outlined text-sm">public</span></a>
+                <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-secondary transition-all cursor-pointer" onclick="alert('Наш Instagram')"><span class="material-symbols-outlined text-sm">photo_camera</span></a>
+                <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-secondary transition-all cursor-pointer" onclick="alert('Наш YouTube')"><span class="material-symbols-outlined
